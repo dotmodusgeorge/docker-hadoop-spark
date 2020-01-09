@@ -1,5 +1,7 @@
 # Docker Hadoop Pypsark
 
+## Running a PySpark App
+
 ```bash
 git clone https://github.com/dotmodusgeorge/docker-hadoop-spark
 
@@ -16,6 +18,10 @@ To run your App in spark, run:
 cd ./app
 ./run.sh
 ```
+
+The logs can be found in `app/logs.txt`. 
+
+## HDFS
 
 To add files to HDFS, you find view on http://localhost:8088. After creating your user, if you receive a Django error, just navigate to http://localhost:8088/home. 
 
