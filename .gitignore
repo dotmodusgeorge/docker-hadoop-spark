@@ -1,5 +1,6 @@
 data
 .vscode
 env
-app/env
+**/env
+**/logs.txt
 app/logs.txt
