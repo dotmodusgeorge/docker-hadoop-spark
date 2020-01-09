@@ -1,4 +1,4 @@
-# Docker Hadoop Pypsark
+# Docker Hadoop PySpark
 
 ## Running a PySpark App
 
@@ -23,6 +23,6 @@ The logs can be found in `app/logs.txt`.
 
 ## HDFS
 
-To add files to HDFS, you find view on http://localhost:8088. After creating your user, if you receive a Django error, just navigate to http://localhost:8088/home. 
+To add files to HDFS, you find the HUE UI on http://localhost:8088. After creating your user, if you receive a Django error, just navigate to http://localhost:8088/home. 
 
-On the top left you'll see `File Browser`. This will open the HDFS storage view and you can manage your files like that. 
+On the top left you'll see `File Browser`. This will open the HDFS storage view and will allow you to manage your files on HDFS.
