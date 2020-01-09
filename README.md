@@ -16,3 +16,7 @@ To run your App in spark, run:
 cd ./app
 ./run.sh
 ```
+
+To add files to HDFS, you find view on http://localhost:8088. After creating your user, if you receive a Django error, just navigate to http://localhost:8088/home. 
+
+On the top left you'll see `File Browser`. This will open the HDFS storage view and you can manage your files like that. 
