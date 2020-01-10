@@ -19,7 +19,13 @@ cd ./app
 ./run.sh
 ```
 
-The logs can be found in `app/logs.txt`. 
+With arguments:
+```
+./run.sh myarg1 myarg2 myarg3
+```
+
+
+The logs can be found in `app/logs.txt`.
 
 ## HDFS
 
