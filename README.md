@@ -1,16 +1,46 @@
 # Docker Hadoop PySpark
 
-## Running a PySpark App
+## Initial Setup
 
 ```bash
 git clone https://github.com/dotmodusgeorge/docker-hadoop-spark
 
 cd docker-hadoop-spark
 
-./start-hadoop-spark.sh
+./start_stack.sh
 ```
 
-When all of the containers are up, you can open the `app` folder and create your pyspark app in there.
+When all of the containers are up, you can create a virtualenv in the root of the directory. 
+
+```bash
+virtualenv env
+
+# or
+
+python3 -m venv env
+```
+
+Activate the environment
+
+```bash
+source ./env/bin/activate
+```
+
+## HDFS
+
+To add source files to HDFS, you find the HUE UI on http://localhost:8088. After creating your user, if you receive a Django error, just navigate to http://localhost:8088/home. 
+
+On the top left you'll see `File Browser`. This will open the HDFS storage view and will allow you to manage your files on HDFS.
+
+Ideally, create a user named `root`.
+
+## Running a PySpark App
+
+Script arguments can be set in the .run.env file. Just append your arguments to the end of the line. For example:
+
+```bash
+SPARK_APPLICATION_ARGS=user/root raw/simple/ stage/simple/ simple
+```
 
 To run your App in spark, run:
 
@@ -18,17 +48,3 @@ To run your App in spark, run:
 cd ./app
 ./run.sh
 ```
-
-With arguments:
-```
-./run.sh myarg1 myarg2 myarg3
-```
-
-
-The logs can be found in `app/logs.txt`.
-
-## HDFS
-
-To add files to HDFS, you find the HUE UI on http://localhost:8088. After creating your user, if you receive a Django error, just navigate to http://localhost:8088/home. 
-
-On the top left you'll see `File Browser`. This will open the HDFS storage view and will allow you to manage your files on HDFS.
